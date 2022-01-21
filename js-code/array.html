@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+
+        let cars = ["bmw", "volvo", "honda", "swift"];
+        console.log(cars);
+        document.getElementById("demo").innerHTML = cars;
+
+        let bmw = cars[0];
+        document.getElementById("demo2").innerHTML = bmw;
+
+        let len = cars.length;
+        document.getElementById("demo3").innerHTML = len;
+
+        let last = cars[cars.length - 1];
+        document.getElementById("demo4").innerHTML = last;
+
+        cars.forEach((item, index, array) => {
+            console.log(item, index);
+        });
+
+        let last1 = cars.pop();
+        document.getElementById("demo5").innerHTML = last1;
+        console.log(cars);
+
+        cars.push("audi");
+        console.log(cars);
+
+        cars.shift();
+        console.log(cars);
+
+        cars.unshift("tata");
+        console.log(cars);
+
+        let bike = ["yamaha", "suzuki", "royal"];
+        console.log(bike);
+
+        let vehicles = cars.concat(bike);
+        console.log(vehicles);
+
+        vehicles.sort();
+        console.log(vehicles);
+
+        let high = vehicles[vehicles.length - 5];
+        console.log(high);
+
+
+        vehicles.reverse();
+        console.log(vehicles);
+
+        let num1 = [2, 3, 4, 5, 6, 7];
+        let num2 = num1.map(multiply);
+        function multiply(val) {
+            return val * 2;
+        }
+        console.log(num2);
+
+        let num3 = num1.filter(comp);
+        function comp(val) {
+            // if (val % 2 == 0) {
+            //     return val;
+            // }
+
+            return val > 3;
+
+        }
+        console.log(num3);
+
+    </script>
+
+</body>
+
+</html>
