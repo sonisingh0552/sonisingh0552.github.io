@@ -1,7 +1,7 @@
 let studentData = [
     { id: 1, name: 'anil', age: 33 },
     { id: 2, name: 'soni', age: 22 },
-    { id: 3, name: 'moni' },
+    { id: 3, age: 44, name: 'moni' },
 ];
 
 function show() {
